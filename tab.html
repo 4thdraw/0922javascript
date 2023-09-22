@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+          
+          const tabDB = ["red","yellow","blue","orange"]; //칼라DB 저장          
+          for(x in tabDB){
+            document.getElementById("btns").innerHTML += `<button>${tabDB[x]}</button>`
+          }
+          /////////////동적버튼객체 생성////////////////
+          
+          document.querySelectorAll("#btns button").forEach((ele, idx)=>{
+                ele.addEventListener("click",()=>{ textchage(tabDB[idx]) })
+          })
+
+          function textchage(c){
+            document.getElementById("content").innerHTML = c;
+          }   
+            
+        }
+          
+    </script>
+</head>
+<body>
+     <div id="btns">
+        
+     </div>
+     <p  id="content">버튼을 클릭할때마다 해당 컨텐츠 출력해라</p>
+</body>
+</html>

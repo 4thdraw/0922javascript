@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+
+          const btn = document.querySelectorAll("#btns button");
+          btn[0].addEventListener('click',function(){
+            bgchage("#ff0000");
+          })
+          btn[1].addEventListener('click',function(){
+            bgchage("yellow");
+          })
+
+          function bgchage(c){
+            document.body.style.backgroundColor = c;
+          }   
+            
+        }
+          
+    </script>
+</head>
+<body>
+     <div id="btns">
+        <button>빨강</button>
+        <button>노랑</button>
+        <button>파랑</button>
+     </div>
+</body>
+</html>
